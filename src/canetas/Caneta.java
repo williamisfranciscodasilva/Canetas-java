@@ -3,12 +3,12 @@ package canetas;
 import javax.swing.JOptionPane;
 
 public class Caneta {
-	String modelo, cor;
-	float ponta;
-	int carga;
-	boolean tampada;
+	public String modelo, cor;
+	private float ponta;
+	protected int carga;
+	private boolean tampada;
 	
-	void status() {
+	public void status() {
 		JOptionPane.showMessageDialog(null,"Modelo "+this.modelo+"\nUma caneta "+ this.cor+
 				"\nPonta "+this.ponta+"\nCarga "+this.carga+"\nEstá tampada? "+ this.tampada);
 		System.out.println("Modelo "+this.modelo);
@@ -18,7 +18,7 @@ public class Caneta {
 		System.out.println("Está tampada? "+ this.tampada);
 	}
 	
-	void rabiscar() {
+	public void rabiscar() {
 		if(this.tampada == true) {
 			JOptionPane.showMessageDialog(null, "ERRO! Não posso rabiscar");
 			System.out.println("ERRO! Não posso rabiscar");
@@ -29,11 +29,11 @@ public class Caneta {
 		}
 	}
 	
-	void tampar() {
+	public void tampar() {
 		this.tampada = true;
 	}
 	
-	void destampar() {
+	public void destampar() {
 		this.tampada =false;
 	}
 }
